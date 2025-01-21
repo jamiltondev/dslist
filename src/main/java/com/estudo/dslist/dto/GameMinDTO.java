@@ -2,6 +2,9 @@ package com.estudo.dslist.dto;
 
 import com.estudo.dslist.entities.Game;
 
+import lombok.Getter;
+
+@Getter
 public class GameMinDTO {
 
     private Long id;
@@ -19,26 +22,6 @@ public class GameMinDTO {
         ano = game.getAno();
         imgUrl = game.getImgUrl();
         descricaoCurta = game.getDescricaoCurta();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public Integer getAno() {
-        return ano;
-    }
-
-    public String getDescricaoCurta() {
-        return descricaoCurta;
     }
 
 }
