@@ -1,17 +1,12 @@
 package com.estudo.dslist.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "tb_game")
@@ -45,20 +40,5 @@ public class Game {
 
     @Column(name = "long_description", columnDefinition = "TEXT")
     private String descricaoLonga;
-
-    public Game() {
-    }
-
-    public Game(Long id, String titulo, Integer ano, String genero, String plataformas, String pontuacao, String imgUrl, String descricaoCurta, String descricaoLonga) {
-        this.id = id;
-        this.titulo = titulo;
-        this.ano = ano;
-        this.genero = genero;
-        this.plataformas = plataformas;
-        this.pontuacao = pontuacao;
-        this.imgUrl = imgUrl;
-        this.descricaoCurta = descricaoCurta;
-        this.descricaoLonga = descricaoLonga;
-    }
 
 }
